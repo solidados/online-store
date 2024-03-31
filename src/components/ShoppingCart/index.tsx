@@ -3,6 +3,9 @@ import { useCart } from "../../hooks/UseCart.tsx";
 import { Offcanvas, Stack } from "react-bootstrap";
 
 import CartItem from "../CartItem";
+import { formatCurrency } from "../../utilities/formatCurrency.ts";
+
+import storeItems from "../../data/books.json";
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -20,6 +23,17 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ isOpen }) => {
           {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
           ))}
+          <div className="ms-auto fw-bold fs-5">
+            Total:{" "}
+            {formatCurrency(
+              cartItems.reduce((total: number, cartItem) => {
+                const item = storeItems.find(
+                  (item): boolean => item.id === cartItem.id,
+                );
+                return total + (item?.price || 0) * cartItem.quantity;
+              }, 0),
+            )}
+          </div>
         </Stack>
       </Offcanvas.Body>
     </Offcanvas>
