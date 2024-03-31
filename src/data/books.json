@@ -1,0 +1,50 @@
+[
+  {
+    "id": "59d8c486-5bf2-4c62-bce1-11e054238839",
+    "name": "JavaScript The Definitive Guide",
+    "author": "David Flanagan",
+    "quantity": 5,
+    "price": 44.99,
+    "image": "/coverJS.webp"
+  },
+  {
+    "id": "f46ab3c0-5e27-4a8a-a28c-62290b0d82f0",
+    "name": "React Modern Templates",
+    "author": "Alex Banks & Eve Porcello",
+    "quantity": 3,
+    "price": 36.49,
+    "image": "/coverReact.jpg"
+  },
+  {
+    "id": "67e16380-4880-41d5-96ad-40afda4536f2",
+    "name": "High Performance MySQL Proven Strategies",
+    "author": "Silvia Botros & Jeremy Tinley",
+    "quantity": 7,
+    "price": 41.49,
+    "image": "/coverMySQL.webp"
+  },
+  {
+    "id": "bba1d71b-9d3c-4991-af91-fd9a1ef3f4d9",
+    "name": "High Performance MySQL Proven Strategies",
+    "author": "Silvia Botros & Jeremy Tinley",
+    "quantity": 1,
+    "price": 21.49,
+    "image": "/coverMySQL.webp"
+  },
+  {
+    "id": "f46ab3c0-5e27-4a8a-a28c-62290b0d82f0",
+    "name": "JavaScript Complete Guide",
+    "author": "David Flanagan",
+    "quantity": 1,
+    "price": 10.99,
+    "image": "/coverJS.webp"
+  },
+  {
+    "id": "67e16380-4880-41d5-96ad-40afda4536f2",
+    "name": "React Modern Templates",
+    "author": "Alex Banks & Eve Porcello",
+    "quantity": 1,
+    "price": 16.59,
+    "image": "/coverReact.jpg"
+  }
+]
