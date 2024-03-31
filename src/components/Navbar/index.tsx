@@ -1,7 +1,7 @@
 import { Button, Container, Nav, Navbar as NavBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { useCart } from "../../hooks/UseCart.tsx";
 import { FaShoppingCart } from "react-icons/fa";
-import { useCart } from "../../context/CartContext.tsx";
 
 const Navbar = () => {
   const { openCart, cartQuantity } = useCart();

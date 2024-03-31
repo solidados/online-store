@@ -1,7 +1,7 @@
 import { FC } from "react";
+import { useCart } from "../../hooks/UseCart.tsx";
 import { Button, Card, CardSubtitle, CardTitle } from "react-bootstrap";
 import { formatCurrency } from "../../utilities/formatCurrency.ts";
-import { useCart } from "../../context/CartContext.tsx";
 
 type StoreItemProps = {
   id: string;

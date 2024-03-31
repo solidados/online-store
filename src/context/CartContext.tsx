@@ -1,11 +1,4 @@
-import {
-  Context,
-  createContext,
-  FC,
-  ReactNode,
-  useContext,
-  useState,
-} from "react";
+import { Context, createContext, FC, ReactNode, useState } from "react";
 
 type CartProviderProps = {
   children: ReactNode;
@@ -31,10 +24,8 @@ export const CartContext: Context<CartContextType> = createContext(
   {} as CartContextType,
 );
 
-export const useCart = () => useContext(CartContext);
-
 export const CartProvider: FC<CartProviderProps> = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [, setIsOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItemType[]>([]);
 
   const cartQuantity: number = cartItems.reduce(
