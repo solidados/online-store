@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useCart } from "../../hooks/UseCart.tsx";
+import { useCart } from "../../hooks/useCart.tsx";
 import storeItems from "../../data/books.json";
 import { Button, Stack } from "react-bootstrap";
 import { formatCurrency } from "../../utilities/formatCurrency.ts";

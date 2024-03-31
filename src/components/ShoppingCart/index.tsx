@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useCart } from "../../hooks/UseCart.tsx";
+import { useCart } from "../../hooks/useCart.tsx";
 import { Offcanvas, Stack } from "react-bootstrap";
 
 import CartItem from "../CartItem";
