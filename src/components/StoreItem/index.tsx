@@ -29,6 +29,7 @@ const StoreItem: FC<StoreItemProps> = (props) => {
         variant="top"
         src={image}
         style={{ height: "320px", objectFit: "scale-down" }}
+        alt={name}
       />
       <Card.Body className="d-flex flex-column">
         <CardTitle className="d-flex justify-content-between align-items-baseline">
