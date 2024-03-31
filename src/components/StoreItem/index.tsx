@@ -3,14 +3,14 @@ import { useCart } from "../../hooks/useCart.tsx";
 import { Button, Card, CardSubtitle, CardTitle } from "react-bootstrap";
 import { formatCurrency } from "../../utilities/formatCurrency.ts";
 
-type StoreItemProps = {
+interface StoreItemProps {
   id: string;
   name: string;
   author: string;
   quantity: number;
   price: number;
   image: string;
-};
+}
 
 const StoreItem: FC<StoreItemProps> = (props) => {
   const { id, name, author, price, image } = props;

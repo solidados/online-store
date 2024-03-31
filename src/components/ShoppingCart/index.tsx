@@ -7,9 +7,9 @@ import { formatCurrency } from "../../utilities/formatCurrency.ts";
 
 import storeItems from "../../data/books.json";
 
-type ShoppingCartProps = {
+interface ShoppingCartProps {
   isOpen: boolean;
-};
+}
 
 const ShoppingCart: FC<ShoppingCartProps> = ({ isOpen }) => {
   const { closeCart, cartItems } = useCart();
@@ -30,7 +30,7 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ isOpen }) => {
                 const item = storeItems.find(
                   (item): boolean => item.id === cartItem.id,
                 );
-                return total + (item?.price || 0) * cartItem.quantity;
+                return total + (item?.price ?? 0) * cartItem.quantity;
               }, 0),
             )}
           </div>

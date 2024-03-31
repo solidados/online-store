@@ -4,7 +4,9 @@ function useLocalStorage<T>(key: string, initialValue: T | (() => T)) {
   const [value, setValue] = useState<T>(() => {
     const jsonValue: string | null = localStorage.getItem(key);
 
-    if (jsonValue !== null) return JSON.parse(jsonValue);
+    if (jsonValue !== null) {
+      return JSON.parse(jsonValue) as T;
+    }
 
     return typeof initialValue === "function"
       ? (initialValue as () => T)()

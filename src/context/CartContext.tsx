@@ -3,16 +3,16 @@ import useLocalStorage from "../hooks/useLocalStorage.ts";
 
 import ShoppingCart from "../components/ShoppingCart";
 
-type CartProviderProps = {
+interface CartProviderProps {
   children: ReactNode;
-};
+}
 
-type CartItemType = {
+interface CartItemType {
   id: string;
   quantity: number;
-};
+}
 
-type CartContextType = {
+interface CartContextType {
   openCart: () => void;
   closeCart: () => void;
   getItemQuantity: (id: string) => number;
@@ -21,7 +21,7 @@ type CartContextType = {
   removeItemFromCart: (id: string) => void;
   cartQuantity: number;
   cartItems: CartItemType[];
-};
+}
 
 export const CartContext: Context<CartContextType> = createContext(
   {} as CartContextType,
@@ -45,7 +45,7 @@ export const CartProvider: FC<CartProviderProps> = ({ children }) => {
   const getItemQuantity = (id: string) => {
     return (
       cartItems.find((item: CartItemType): boolean => item.id === id)
-        ?.quantity || 0
+        ?.quantity ?? 0
     );
   };
 

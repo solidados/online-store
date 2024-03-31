@@ -4,10 +4,10 @@ import storeItems from "../../data/books.json";
 import { Button, Stack } from "react-bootstrap";
 import { formatCurrency } from "../../utilities/formatCurrency.ts";
 
-type CartItemProps = {
+interface CartItemProps {
   id: string;
   quantity: number;
-};
+}
 
 const CartItem: FC<CartItemProps> = ({ id, quantity }) => {
   const { removeItemFromCart } = useCart();
