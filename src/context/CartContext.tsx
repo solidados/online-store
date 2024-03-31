@@ -1,4 +1,5 @@
 import { Context, createContext, FC, ReactNode, useState } from "react";
+import ShoppingCart from "../components/ShoppingCart";
 
 type CartProviderProps = {
   children: ReactNode;
@@ -25,7 +26,7 @@ export const CartContext: Context<CartContextType> = createContext(
 );
 
 export const CartProvider: FC<CartProviderProps> = ({ children }) => {
-  const [, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItemType[]>([]);
 
   const cartQuantity: number = cartItems.reduce(
@@ -94,6 +95,7 @@ export const CartProvider: FC<CartProviderProps> = ({ children }) => {
       }}
     >
       {children}
+      <ShoppingCart isOpen={isOpen} />
     </CartContext.Provider>
   );
 };
