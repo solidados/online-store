@@ -15,7 +15,7 @@ $ cd shop-online; npm install
 ```shell
 $ npm run dev
 ```
-_or_
+_or_ `build` mode
 ```shell
 $ npm run build
 ```
